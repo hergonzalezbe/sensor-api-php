@@ -2,12 +2,16 @@ CREATE DATABASE sensor_data /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8m
 
 USE sensor_data;
 
-CREATE TABLE `sensors` (
+drop table if exists sensor_readings;
+drop table if exists sensors;
+
+create TABLE `sensors` (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(100) NOT NULL,
     `type` VARCHAR(50) NOT NULL,
     `location` VARCHAR(100),
-    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `active` int default 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE `sensor_readings` (
