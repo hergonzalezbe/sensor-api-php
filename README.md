@@ -22,17 +22,17 @@ cd sensor-api-php
 
 ## API Endpoints
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|---------|-------------|
-| `GET`  | `/sensors` | Listar sensores activos |
-| `POST` | `/sensors` | Registrar un sensor (`name`, `location`, `type`) |
-| `GET`  | `/sensors/{id}` | Obtener detalles de un sensor por su ID |
-| `PUT`  | `/sensors/{id}` | Actualizar la información de un sensor |
-| `DELETE` | `/sensors/{id}` | Eliminar un sensor |
-| `POST` | `/data` | Registrar una lectura (`sensor_id`, `value`, `timestamp`) |
-| `GET`  | `/data` | Obtener todas las lecturas de sensores |
-| `GET`  | `/data/{sensor_id}` | Obtener lecturas de un sensor específico |
-| `GET`  | `/data/report` | Obtener un resumen de datos por sensor (promedios, máximos, mínimos) |
+| `GET`  | `/sensors` | Active sensors list |
+| `POST` | `/sensors` | Add a sensor (`name`, `location`, `type`) |
+| `GET`  | `/sensors/{id}` | Get sensor details by ID |
+| `PUT`  | `/sensors/{id}` | Update sensor information |
+| `DELETE` | `/sensors/{id}` | Delete a sensor |
+| `POST` | `/data` | Log a reading (`sensor_id`, `value`, `timestamp`) |
+| `GET`  | `/data` | Get all sensor readings |
+| `GET`  | `/data/{sensor_id}` | Get a reading from a specific sensor |
+| `GET`  | `/data/report` | Get a data summary per sensor (averages, maximums, minimums) |
 
 
 ## Example Request (POST - JSON)
